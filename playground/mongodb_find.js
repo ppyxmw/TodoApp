@@ -9,6 +9,12 @@ MongoClient.connect(MONGO_URL, (err, client) => {
   console.log('Connected to MongoDB server.');
   const db = client.db('781911583413');
   
+  db.collection('Todos').find().toArray().then((docs) => {
+    console.log(JSON.stringify(docs, undefined, 2));
+  }, (err) => {
+    console.log('Unable to fetch docs', err)
+  });
+  
   db.collection('Todos').find().count().then((count) => {
     console.log(`Count Todos: ${count}`);
   }, (err) => {
