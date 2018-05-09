@@ -10,18 +10,18 @@ MongoClient.connect(MONGO_URL, (err, client) => {
   const db = client.db('781911583413');
 
 // deleteMany
-  db.collection('Todos').deleteMany({text: 'Eat lunch.'}).then((result) => {
-    console.log(result);
-  }, (err) => {
-    console.log('Could not delete', err)
-  });
+//   db.collection('Todos').deleteMany({text: 'Eat lunch.'}).then((result) => {
+//     console.log(result);
+//   }, (err) => {
+//     console.log('Could not delete', err)
+//   });
 
 // deleteOne -- deletes first time that matche critrea then stops
-  db.collection('Todos').deleteOne({text: 'Eat lunch.'}).then((result) => {
-    console.log(result);
-  }, (err) => {
-    console.log('Could not delete', err)
-  });
+//   db.collection('Todos').deleteOne({text: 'Eat lunch.'}).then((result) => {
+//     console.log(result);
+//   }, (err) => {
+//     console.log('Could not delete', err)
+//   });
 
 
 //findOneAndDelete -- deletes first, also returns what was deleted so user can know
