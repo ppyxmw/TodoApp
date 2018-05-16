@@ -100,7 +100,7 @@ describe('GET /todos/:id', () => {
 
 describe('DELETE /todos/:id', () => {
   it('should remove a todo', (done) => {
-    var hexId = todos[0]._id.toHexString()
+    var hexId = todos[0]._id.toHexString();
     request(app)
       .delete(`/todos/${hexId}`)
       .expect(200)
